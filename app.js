@@ -29,7 +29,10 @@ const buttons = document.querySelectorAll(".btn");
 
 // event date
 //const eventDateObj = new Date(2021, 4, 25, 8, 48, 00);
-const eventDateObj = new Date(2021, 4, new Date().getDate() + 2, 10, 30, 00);
+const twoDaysTime = 24 * 2 * 60 * 60 * 1000;
+const eventTime = new Date().getTime() + twoDaysTime; // current time + 2days
+const eventDateObj = new Date(eventTime);
+
 const eventDay = eventDateObj.getDay();
 const eventDate = eventDateObj.getDate();
 const eventMonth = eventDateObj.getMonth();
